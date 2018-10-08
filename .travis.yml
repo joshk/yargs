@@ -1,14 +1,15 @@
 language: node_js
 
 os:
+  - windows
   - linux
   - osx
 
 after_success: npm run coverage
 
-cache:
-  directories:
-    - "node_modules"
+#cache:
+#  directories:
+#    - "node_modules"
 
 node_js:
   - "6"
