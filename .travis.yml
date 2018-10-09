@@ -10,8 +10,8 @@ os:
   - osx
   - windows
 
-after_success: if [[ "$TRAVIS_OS_NAME" != 'windows' ]]; then npm run coverage; fi
+cache:
+  directories:
+    - "node_modules"
 
-#cache:
-#  directories:
-#    - "node_modules"
+after_success: if [[ "$TRAVIS_OS_NAME" != 'windows' ]]; then npm run coverage; fi
